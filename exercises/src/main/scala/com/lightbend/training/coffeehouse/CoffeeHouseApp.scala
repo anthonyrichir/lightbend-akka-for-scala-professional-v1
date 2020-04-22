@@ -40,6 +40,8 @@ class CoffeeHouseApp(system: ActorSystem) extends Terminal {
 
   private val coffeeHouse = createCoffeeHouse()
 
+  coffeeHouse !  "Brew Coffee"
+
   def run(): Unit = {
     log.warning(f"{} running%nEnter "
       + Console.BLUE + "commands" + Console.RESET
